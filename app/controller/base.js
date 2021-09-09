@@ -47,11 +47,12 @@ class BaseController extends Controller {
 
   /**
    * 未找到资源响应
-   * @param {string} message not found message
+   * @param {Object} response - HTTP body
+   * @param {string} [response.message] - not found message
    */
-  notFound(message) {
+  notFound(response) {
     this.ctx.status = 404;
-    this.ctx.body = Object.assign({}, NOT_FOUND_RESPONSE, { message });
+    this.ctx.body = Object.assign({}, NOT_FOUND_RESPONSE, response);
   }
 }
 
