@@ -5,7 +5,7 @@ module.exports = () => {
    * built-in config
    * @type {Egg.EggAppConfig}
    **/
-  config = exports = {};
+  const config = exports = {};
 
   // sequelize config
   config.sequelize = {
@@ -23,4 +23,6 @@ module.exports = () => {
       deletedAt: 'delete_time',
     },
   };
+
+  return config;
 };

@@ -18,6 +18,11 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  config.jwt = {
+    secret: 'yqegu0hejpbyzv15',
+    expire: 60 * 60 * 24 * 7,
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
